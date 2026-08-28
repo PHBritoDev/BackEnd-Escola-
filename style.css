@@ -33,13 +33,41 @@ background-color: var(--surface-color);
 border-radius: var(--radius);
 box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 overflow: hidden;
+   
+animation: cor 9s infinite;
+}
 
+
+@keyframes cor{
+    25%{ 
+        background: rgb(61, 57, 57);
+
+    }
+    50%{ opacity: 0.8;
+          background: rgb(119, 75, 119);
+
+    }
+    75%{ opacity: 0.8;  
+           background: rgb(125, 108, 77);
+        
+    }
+    100%{ opacity: 0.8;  
+          background: rgb(139, 139, 86);
+
+    }
+}
+
+.baixarPDF:hover{
+transform: scale(0.6);
 
 }
 
+
+
+
 header {
 background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
-color: white;
+color: rgb(13, 13, 13);
 padding: 2rem;
 text-align: center;
 }
@@ -47,6 +75,8 @@ text-align: center;
 header h1 {
 font-size: 2rem;
 margin-bottom: 0.5rem;
+text-shadow: 0px 3px 15px white;
+
 }
 
 header p {
@@ -72,7 +102,9 @@ background: #f3f4f6;
 padding: 1.5rem;
 border-radius: var(--radius);
 border: 1px solid var(--border-color);
+box-shadow: 0px 30px 30px #dbdbd9;
 }
+
 
 .form-section h2,
 .list-section h2 {
@@ -129,6 +161,10 @@ border-radius: 8px;
 cursor: pointer;
 font-weight: bold;
 transition: background-color 0.2s, transform 0.1s;
+
+}
+.btn-save:hover{
+    transform: scale(0.7);
 }
 
 .btn-save {
@@ -174,8 +210,25 @@ border-bottom: 1px solid var(--border-color);
 th {
 background-color: var(--bg-color);
 font-weight: bold;
+text-shadow: 2px 2px 10px;
+color: #1f2937;
 }
 
 tbody tr:hover {
 background-color: #f9fafb;
 }
+
+.btn-edit:hover {
+    background-color: var(--edit-hover);
+    color: white;
+}
+
+.btn-delete {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: var(--danger-hover);
+}
+
