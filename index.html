@@ -1,0 +1,114 @@
+<!DOCTYPE html> <html lang="pt-BR"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <link rel="stylesheet" href="style.css"> <title>Painel de Alunos</title> </head> <body> <div class="container">
+<header>
+    <h1>Painel de Alunos</h1>
+    <p>Demonstração de CRUD front-end/back-end (Node.js)</p>
+
+    <button
+        onclick="window.print()"
+        style="
+            margin-top: 1rem;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            border: none;
+            background: white;
+            color: var(--primary-color);
+        "
+    >
+        ⬇️ Baixar PDF
+    </button>
+</header>
+
+<main>
+
+    <section class="form-section">
+        <h2>Novo Aluno</h2>
+
+        <form id="aluno-form">
+
+            <input type="hidden" id="aluno-id">
+
+            <div class="input-group">
+                <label for="nome">Nome Completo</label>
+                <input
+                    type="text"
+                    id="nome"
+                    required
+                    placeholder="Ex: zé antonio pereira"
+                >
+            </div>
+
+            <div class="input-group">
+                <label for="email">E-mail</label>
+                <input
+                    type="email"
+                    id="email"
+                    required
+                    placeholder="Ex: paulao67@email.com"
+                >
+            </div>
+
+            <div class="input-group">
+                <label for="curso">Curso</label>
+
+                <select id="curso" required>
+                    <option value="">Selecione um Curso...</option>
+                    <option value="Analise do Sistemas">
+                        Analise Do Sistemas
+                    </option>
+                    <option value="Engenharia do Software">
+                        Engenharia Do Software
+                    </option>
+                    <option value="Ciencia da Computaçao">
+                        Ciencia da Computaçao
+                    </option>
+                </select>
+            </div>
+
+            <div class="Form-actions">
+                <button
+                    type="button"
+                    class="btn-cancel"
+                    id="btn-cancel"
+                    style="display: none;"
+                >
+                    Cancelar Edição
+                </button>
+
+                <button
+                    type="submit"
+                    class="btn-save"
+                    id="btn-save"
+                >
+                    Salvar Aluno
+                </button>
+            </div>
+
+        </form>
+    </section>
+
+    <section class="list-section">
+        <h2>Alunos Cadastrados</h2>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Curso</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody id="alunos-tbody">
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</main>
+
+</div> </body> </html>
